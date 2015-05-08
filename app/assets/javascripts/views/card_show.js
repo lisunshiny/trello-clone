@@ -1,6 +1,6 @@
-TrelloClone.Views.ListShow = Backbone.View.extend({
+TrelloClone.Views.CardShow = Backbone.View.extend({
   tagName: "li",
-  className: "card-group",
+  className: "card-item",
 
   initialize: function() {
     this.listenTo(this.model, "sync change", this.render)
@@ -20,7 +20,6 @@ TrelloClone.Views.ListShow = Backbone.View.extend({
   },
 
   destroy: function(event) {
-    $(event.currentTarget).data("id")
     this.model.destroy({
       success: function() {
         this.collection.remove(this.model);
