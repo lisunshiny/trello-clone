@@ -1,20 +1,19 @@
 TrelloClone.Views.ListShow = Backbone.View.extend({
   tagName: "li",
-  className: "list-group-item list-item",
-
+  className: "card-group",
 
   initialize: function() {
     this.listenTo(this.model, "sync change", this.render)
   },
 
-  template: JST["lists/list"],
+  template: JST["cards/card"],
 
   events: {
-    "click .delete-list": "destroy"
+    "click .delete-card": "destroy"
   },
 
   render: function() {
-    var content = this.template({ list: this.model });
+    var content = this.template({ card: this.model });
     this.$el.html(content);
 
     return this;

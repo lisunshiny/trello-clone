@@ -3,28 +3,13 @@
 </h1>
 
 <ul class="list-group">
-  <% board.lists().each(function(list) { %>
-    <li class="list-group-item list-item">
-      <h3><%= list.escape("title") %><h3>
-        <ul class="list-group">
-          <% list.cards().each(function(card) { %>
-            <li class="card-group">
-              <h4><%= card.escape("title") %></h4>
-              <p class="card-desc">
-                <%= card.escape("description") %>
-              </p>
-              <button
-                class="delete-card"
-                data-id="<%= card.get("id") %>">
-                Delete
-              </button>
-            </li>
-          <% }) %>
-        </ul>
-    </li>
-  <% }) %>
 </ul>
+
+
+<br>
+
 <a href="#/<%= board.id %>/lists/new">Add list</a>
+
 <button class="btn btn-default delete-board">Delete board</button>
 
 <div class="new-list"></div>
