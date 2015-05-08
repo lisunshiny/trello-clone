@@ -9,7 +9,8 @@ TrelloClone.Routers.Router = Backbone.Router.extend({
     "": "index",
     "new": "createBoard",
     ":id/lists/new":"createList",
-    ":id": "show",
+    ":boardId/lists/:listId/cards/new": "createCard",
+    ":id": "show"
   },
 
   index: function() {
@@ -47,6 +48,21 @@ TrelloClone.Routers.Router = Backbone.Router.extend({
     var model = new TrelloClone.Models.List();
 
     var view = new TrelloClone.Views.ListForm({model: model, collection: collection });
+
+    this.$rootEl.html(view.render().$el);
+  },
+
+  createCard: function(boardId, listId) {
+    var board = this.collection.getOrFetch(boardId);
+    var list = board.lists().get(listId);
+    var collection = list.cards();
+
+    var model = new TrelloClone.Models.Card();
+
+    var view = new TrelloClone.Views.CardForm( {
+      model: model,
+      collection: collection
+    });
 
     this.$rootEl.html(view.render().$el);
   }

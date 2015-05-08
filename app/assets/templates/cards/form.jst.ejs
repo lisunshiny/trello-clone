@@ -1,0 +1,24 @@
+<form class="form-inline">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control card-form"
+      id="card-title"
+      name="card[title]"
+      placeholder="Card title">
+    <input
+      type="text"
+      class="form-control card-form"
+      id="card-title"
+      name="card[description]"
+      placeholder="Card description">
+    <input
+      type="hidden"
+      class="card-form"
+      name="card[list_id]"
+      value="<%= this.collection.list.id %>">
+
+  </div>
+
+  <button type="submit" class="btn btn-default">Add a card</button>
+</form>
