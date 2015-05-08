@@ -1,8 +1,5 @@
-TrelloClone.Views.BoardForm = Backbone.View.extend({
-  initialize: function() {
-  },
-
-  template: JST["boards/form"],
+TrelloClone.Views.ListForm = Backbone.View.extend({
+  template: JST["lists/form"],
 
   events: {
     "click button": "save"
@@ -18,11 +15,11 @@ TrelloClone.Views.BoardForm = Backbone.View.extend({
 
   save: function(event) {
     event.preventDefault();
-    var attrs = this.$el.find("#board-title").serializeJSON();
+    var attrs = this.$el.find(".list-form").serializeJSON();
     this.model.save(attrs, {
       success: function() {
         this.collection.add(this.model);
-        Backbone.history.navigate("#" + this.model.id, { trigger: true });
+        Backbone.history.navigate("#" + this.collection.board.id, { trigger: true });
       }.bind(this),
       error: function() {
         alert("you suck");

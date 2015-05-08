@@ -1,0 +1,18 @@
+<form class="form-inline">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control list-form"
+      id="list-title"
+      name="list[title]"
+      placeholder="New list">
+    <input
+      type="hidden"
+      class="list-form"
+      name="list[board_id]"
+      value="<%= this.collection.board.id %>">
+
+  </div>
+
+  <button type="submit" class="btn btn-default">Add a list</button>
+</form>
