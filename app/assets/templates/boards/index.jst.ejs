@@ -1,7 +1,9 @@
 <ul class="list-group">
   <% boards.each(function(board) { %>
-    <li class="list-group-item">
+    <a href="#/<%= board.id %>" class="list-group-item">
       <%= board.escape("title") %>
-    </li>
+    </a>
   <% }) %>
 </ul>
+
+<a href="#/new">Create a new board</a>

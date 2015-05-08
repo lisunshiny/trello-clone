@@ -1,0 +1,11 @@
+<div class="page-header">
+  <%= board.escape("title") %>
+</div>
+
+<ul class="list-group">
+  <% board.lists.each(function(list) { %>
+    <li class="list-group-item">
+      <%= list.escape("title") %>
+    </li>
+  <% }) %>
+</ul>
