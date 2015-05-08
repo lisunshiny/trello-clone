@@ -33,7 +33,8 @@ TrelloClone.Routers.Router = Backbone.Router.extend({
   show: function(id) {
     var model = this.collection.getOrFetch(id);
     var view1 = new TrelloClone.Views.BoardShow( {
-      model: model
+      model: model,
+      collection: this.collection
     })
 
     this.$rootEl.html(view1.render().$el);
@@ -44,7 +45,7 @@ TrelloClone.Routers.Router = Backbone.Router.extend({
     var collection = board.lists();
 
     var model = new TrelloClone.Models.List();
-    
+
     var view = new TrelloClone.Views.ListForm({model: model, collection: collection });
 
     this.$rootEl.html(view.render().$el);

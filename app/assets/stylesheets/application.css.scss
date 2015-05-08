@@ -15,3 +15,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+li {
+  list-style-type: none;
+}
+
+.list-item {
+  float: left;
+}
+
+.card-group {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.card-group:hover button {
+  display: block;
+}
+
+.card-group:hover {
+  background: #FFFFCC;
+}
+
+.delete-card {
+  font-size: 14px;
+  position: absolute;
+  display: none;
+}
+
+.card-desc {
+  font: 14px sans-serif
+}

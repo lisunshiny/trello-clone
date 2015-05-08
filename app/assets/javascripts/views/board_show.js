@@ -6,7 +6,7 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
   template: JST["boards/show"],
 
   events: {
-
+    "click .delete-board": "destroy"
   },
 
   render: function() {
@@ -14,5 +14,15 @@ TrelloClone.Views.BoardShow = Backbone.View.extend({
     this.$el.html(content);
 
     return this;
+  },
+
+  destroy: function(event) {
+    alert("hi");
+    this.model.destroy({
+      success: function() {
+        this.collection.remove(this.model);
+        Backbone.history.navigate("", {trigger: true})
+      }.bind(this)
+    })
   }
 })
