@@ -23,7 +23,7 @@ TrelloClone.Views.CardShow = Backbone.View.extend({
     this.model.destroy({
       success: function() {
         this.collection.remove(this.model);
-        Backbone.history.loadURL();
+        Backbone.history.loadUrl();
       }.bind(this)
     })
   }
