@@ -2,9 +2,8 @@ TrelloClone.Models.Board = Backbone.Model.extend({
   urlRoot: "api/boards",
 
   parse: function(json) {
-
     if (json.lists) {
-      this.lists.set(json.lists);
+      this.lists().set(json.lists);
       delete json.lists;
     }
 
@@ -13,6 +12,10 @@ TrelloClone.Models.Board = Backbone.Model.extend({
 
   lists: function() {
     if (!this._lists) {
+      this._lists = new TrelloClone.Collections.Lists({
+        board: this
+      });
     }
+    return this._lists;
   }
 })
