@@ -12,13 +12,88 @@
  *= require jquery-ui
  *= require_tree .
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
+
+// css reset
+
+html, body, div, li, a, ul, p, h1, h2, h3, h4, h5, nav {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+
 
 li {
   list-style-type: none;
 }
+
+// utilities
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+//styling
+
+//header
+.header {
+  background: black;
+  font: 20px sans-serif;
+  position: relative;
+  color: white;
+  opacity: .6;
+
+}
+
+.top-bar {
+  display: block;
+  margin: auto;
+  border: 1px solid white;
+  position: relative;
+}
+
+.right-links {
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.right-links li {
+  float: left;
+  display: block;
+  padding: 10px;
+
+}
+
+.home-link {
+  display: block;
+  padding: 10px;
+  margin: auto;
+  width: 100px;
+  text-align: center;
+}
+
+
+//main
+
+#main {
+  display: block;
+  margin: auto;
+  background: green;
+  margin: 5px;
+}
+
+
 
 .list-item {
   float: left;

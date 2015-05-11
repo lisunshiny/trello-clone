@@ -1,6 +1,11 @@
 TrelloClone.Views.CardShow = Backbone.View.extend({
   tagName: "li",
-  className: "card-item"
+  className: "card-item",
+  id: function() {
+    if (typeof this.model.get("ord") === "number") {
+      return this.model.get("ord")
+    };
+  },
 
   initialize: function() {
     this.listenTo(this.model, "sync change", this.render)
