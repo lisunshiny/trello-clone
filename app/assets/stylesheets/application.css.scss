@@ -28,7 +28,9 @@ html, body, div, li, a, ul, p, h1, h2, h3, h4, h5, nav {
   background: transparent;
 }
 
-
+body {
+  font-family: sans-serif;
+}
 
 li {
   list-style-type: none;
@@ -89,9 +91,34 @@ li {
 #main {
   display: block;
   margin: auto;
-  background: green;
   margin: 5px;
 }
+
+//landing page
+.group-list {
+  color: black;
+}
+
+.group-list-header {
+  font-weight: bold;
+  font-size: 36px;
+  display: block;
+
+}
+.group-list li > a{
+  background: blue;
+  color: white;
+  opacity: .7;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  float: left;
+  border-radius: 5px;
+}
+
+
+
+
 
 
 

@@ -1,9 +1,13 @@
-<ul class="list-group">
+<ul class="group-list clearfix">
+  <lh class="group-list-header">Your boards</lh>
   <% boards.each(function(board) { %>
-    <a href="#/<%= board.id %>" class="list-group-item">
-      <%= board.escape("title") %>
-    </a>
+    <li>
+      <a href="#/<%= board.id %>" class="list-group-item">
+        <%= board.escape("title") %>
+      </a>
+    </li>
   <% }) %>
 </ul>
 
-<a href="#/new">Create a new board</a>
+
+<section id="new-board-form"></section>

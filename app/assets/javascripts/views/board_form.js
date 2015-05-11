@@ -1,4 +1,6 @@
 TrelloClone.Views.BoardForm = Backbone.View.extend({
+  className: "board-form",
+  tagName: "form",
   initialize: function() {
   },
 
