@@ -17,10 +17,14 @@ TrelloClone.Views.CardForm = Backbone.View.extend ({
     event.preventDefault();
     var attrs = this.$el.find(".card-form").serializeJSON();
     this.model.save(attrs, {
+
       success: function() {
         this.collection.add(this.model);
-        Backbone.history.loadUrl();
+
+        var id = Backbone.history.getFragment()[0];
+        Backbone.history.navigate("#" + id, { trigger: true });
       }.bind(this),
+
       error: function() {
         alert("you suck");
       }
