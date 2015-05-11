@@ -29,7 +29,7 @@ html, body, div, li, a, ul, p, h1, h2, h3, h4, h5, nav {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: helvetica;
 }
 
 li {
@@ -91,7 +91,7 @@ li {
 #main {
   display: block;
   margin: auto;
-  margin: 5px;
+  margin: 10px;
 }
 
 //landing page
@@ -116,20 +116,77 @@ li {
   border-radius: 5px;
 }
 
+.board-form {
+}
+
+.board-form input {
+  border: 1px solid gray;
+  padding: 10px;
+  background: white;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.board-form button {
+  padding: 10px;
+  font-size: 20px;
+}
 
 
+//board show
+.board-show {
+  background: #0E74AF;
+}
 
+.board-show-header {
+  margin: 10px;
+  font: 18px helvetica;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
 
-
+}
 
 .list-item {
+  background: #E2E4E6;
+  margin: 5px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 3px;
   float: left;
+  position: relative;
 }
 
 .card-item {
-  border: 1px solid black;
-  padding: 20px;
+  display: block;
+  position: relative;
+  background: white;
+  margin-bottom: 6px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px #CCCCCC;
+  min-width: 230px;
+  min-height: 20px;
 }
+
+.card-item:hover {
+  background: #EDEFF0
+}
+
+.list-item h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #4D4D4D;
+  margin-bottom: 10px;
+}
+
+.list-links {
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
+  color: #575757;
+}
+
 
 .card-item:hover button {
   display: block;
@@ -139,10 +196,24 @@ li {
   background: #FFFFCC;
 }
 
+.list-item:hover a {
+  display: block;
+}
+
+.delete-list {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+
 .delete-card {
   font-size: 14px;
   position: absolute;
   display: none;
+  right: 5px;
+  top: 5px;
 }
 
 .card-desc {
@@ -150,5 +221,5 @@ li {
 }
 
 .cards-container {
-  min-height: 100px;
+  min-height: 55px;
 }

@@ -1,8 +1,12 @@
-<h3><%= list.escape("title") %><h3>
+<h3><%= list.escape("title") %></h3>
 
 <ul class="list-group cards-container clearfix"></ul>
 
-<a href="#<%= list.get('board_id') + '/lists/' + list.id + '/cards/new' %>">Add card</a>
-<form class="new-card">
-</form>
-<button class="delete-list">Delete list</button>
+<section class="new-card">
+
+</section>
+
+
+<a class="add-board-link list-links" href="#<%= list.get('board_id') + '/lists/' + list.id + '/cards/new' %>">Add a card...</a>
+
+<a class="delete-list list-links" href="javascript:;">X</a>

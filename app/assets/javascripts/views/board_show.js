@@ -7,6 +7,9 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend({
 
   },
 
+  tagName: "section",
+  className: "board-show",
+
   template: JST["boards/show"],
 
   events: {
@@ -18,7 +21,7 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend({
 
     $cards.sortable({
       update: function(event, ui) {
-        
+
       },
 
 
